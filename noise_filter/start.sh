@@ -8,7 +8,7 @@ python3 ${dirname}/noise_filter/cal_ppl.py \
   --jizhi 1 \
   --n_gpu 6 \
 
- python3 filter_ppl.py \
+python3 noise_filter/filter_ppl.py \
   --pred_file ${dirname}/logs/${version_name}.pred \
   --ppl_file ${dirname}/logs/${version_name}.pred.ppl \
   --denoise_file ${dirname}/logs/${version_name}.denoise \

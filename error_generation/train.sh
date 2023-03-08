@@ -1,6 +1,10 @@
 version_name="transformer_v1"
 dirname="./"
 
+filename=${dirname}/logs/${version_name}.all
+filename2=${filename}.multi
+cat $filename >> $filename2
+
 python3 ${dirname}/error_generation/run_mlm.py \
   --version_name ${version_name} \
   --log_file ${dirname}/logs/ \
