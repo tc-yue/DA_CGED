@@ -1,4 +1,5 @@
-# This repo provides the Code for DataAugmentationCGED Paper in ACL 2022.
+# Code for DataAugmentationCGED
+This repo provides the Code for DataAugmentationCGED Paper in ACL 2022.
 
 ### Pipeline
 - 1：Prepare the training data for the error generation model.
@@ -7,11 +8,11 @@
   - sh error_generation/train.sh
 - 3： Filter non-error generated spans by span-level perplexity
   - sh noise_filter/start.sh
-- 4: auto label the generated span by editing method (TBD)
-  - python3 auto_label/auto_label.py --mlm_version=${version} --dir_name=${dir_name}
-- 5: construct the final training sample (TBD)
-  - python3 sample_construction/merge_multi_error.py
-- 6: train the detection model with the augmented dataset (TBD) 
+- 4: auto label the generated span by editing method 
+  - sh auto_label/run.sh
+- 5: construct the final training sample 
+  - sh sample_construction/run.sh
+- 6: train the detection model with the augmented dataset 
   - sh error_detection/train.sh
       
 ### Dataset
