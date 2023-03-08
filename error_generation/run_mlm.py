@@ -231,7 +231,7 @@ class ConMLM(BertPreTrainedModel):
             .view(batch_size, -1, hidden_dim)
 
         # MSE loss
-        loss_lambda = 0.5
+        loss_lambda = - 0.5
         context_mean = torch.mean(masked_context_output, dim=1)
         masked_mean = torch.mean(masked_combine_output, dim=1)
         mse_loss = F.mse_loss(masked_mean, context_mean)
